@@ -11,12 +11,12 @@ FROM $BASE_CONTAINER
 USER root
 
 RUN	apt-get install -y aria2
-RUN	apt-get install nmap
-RUN	apt-get install traceroute
+RUN	apt-get install -y nmap
+RUN	apt-get install -y traceroute
 
 # 3) install packages
-RUN conda install geopandas
-RUN conda install babypandas
+RUN conda install -y geopandas
+RUN conda install -y babypandas
 
 # 4) change back to notebook user
 COPY /run_jupyter.sh /
