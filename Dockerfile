@@ -16,11 +16,11 @@ RUN	apt-get install -y traceroute
 
 # 3) install packages
 RUN conda install -y geopandas
-RUN conda install -y babypandas
+RUN pip install -y babypandas
 
 # 4) change back to notebook user
 COPY /run_jupyter.sh /
-# USER $NB_UID
+USER $NB_UID
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
