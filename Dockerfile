@@ -16,7 +16,7 @@ RUN	apt-get install -y traceroute
 
 # 3) install packages
 RUN conda install -y geopandas
-RUN pip install -y babypandas
+RUN pip install babypandas
 
 # 4) change back to notebook user
 COPY /run_jupyter.sh /
